@@ -186,8 +186,8 @@ p {
 .poker button,
 .gameConsole button,
 .gameButtons,
-.window p,
-.window,
+.windowText p,
+.windowText,
 .result button {
     background-color: hsl(0, 20%, 100%);
 }
