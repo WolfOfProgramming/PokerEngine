@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PokerEngine</title>
+    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <header>
+        <h1>PokerEngine</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#aboutProjectContainer">About Project</a></li>
+                <li><a href="#whereAreWeHeadingContainer">Where are we heading?</a></li>
+                <li><a href="#gameRuleContainer">Game Rules</a></li>
+            </ul>
+        </nav>
+        <button class="startGame startButton">Play</button>
+    </header>
+    <div class="mainContent">
+        <div class="developmentNotes">
+            <div class="aboutProjectContainer" id="aboutProjectContainer">
+                <div class="aboutProjectText">
+                    <h3 class="aboutProjectHeader">About Project</h3>
+                    <p class="aboutProjectParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eaque animi optio beatae fugiat dolor ipsa delectus asperiores vitae architecto laboriosam, a facere sequi ad, culpa id aperiam autem quisquam.</p>
+                </div>
+                <img src="./imagesV2/fog.jpg" alt="Forest in Fog" class="fogImg">
+            </div>
+            <div class="whereAreWeHeadingContainer" id="whereAreWeHeadingContainer">
+                <img src="./imagesV2/way.jpg" alt="Way to house" class="wayImg"> 
+                <div class="whereAreWeHeadingDiv">  
+                    <h3 class="whereAreWeHeadingHeader">Where are we heading?</h3>
+                    <p class="whereAreWeHeadingParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo dignissimos nobis error similique consequatur perferendis. Eaque quae minus soluta recusandae, facere molestiae itaque eligendi nesciunt quidem aperiam sapiente ea.</p>
+                </div>
+            </div>
+            <div class="gameRuleContainer" id="gameRuleContainer">
+                <div class="gameRuleDiv">
+                    <h3 class="gameRuleHeader">Game Rules</h3>
+                    <p class="gameRuleParagraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, atque! Deleniti praesentium magnam fuga, eveniet provident voluptatem? Velit, nisi recusandae magnam assumenda unde quisquam voluptatum reprehenderit illo optio ullam. Voluptatem.</p>
+                </div>
+                <img src="./imagesV2/playingCards.jpg" alt="Cards to play" class="playCardsImg">
+            </div>
+        </div>
+    </div>
+    <div class="poker">
+        <p class="information">Your Cards:</p>
+        <div class="game">
+            <div class="cards"></div>
+            <div class="gameConsole">
+                <div class="window"></div>
+                <div class="gameButtons"></div>
+            </div>
+        </div>
+        <p class="inCards"></p>
+        <div class="result"></div>
+    </div>
+    <footer></footer>
+    <script src="./src/main.js"></script>
+</body>
+</html>

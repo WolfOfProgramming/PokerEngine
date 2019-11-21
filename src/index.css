@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+
+.hidden {
+    display: none;
+}
+
+.redCard {
+    color: hsl(0, 80%, 60%);
+    margin: 0;
+}
+
+.blackCard {
+    color: hsl(0, 5%, 10%);
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(40, 5%, 15%);
+    color: hsl(20, 30%, 100%);
+}
+
+li, a, h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.nav__links li a {
+    transition: all 0.3 ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1;
+    text-align: center;
+    font-size: 14rem;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+}
+
+.startButton {
+    font-size: 25px;
+    border-radius: 20px;
+    color: #edf0f1;
+    height: 50px;
+    width: 200px;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: rgb(115, 237, 241);
+    cursor: pointer;
+}
+.information {
+    text-align: center;
+    font-size: 3em;
+    margin: 5px;
+}
+
+.developmentNotes {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 100px 0;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 5px;
+    padding: 20px;
+}
+
+.aboutProjectContainer,
+.whereAreWeHeadingContainer,
+.gameRuleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+img {
+    min-height: 720px;
+    min-width: 75%;
+}
+
+.fogImg,
+.playCardsImg {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.wayImg {
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+}
+
+.aboutProjectContainer,
+.aboutProjectText,
+.aboutProjectHeader,
+.aboutProjectParagraph,
+.gameRuleContainer,
+.gameRuleDiv,
+.gameRuleHeader,
+.gameRuleParagraph {
+    background-color: hsl(0, 20%, 100%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.whereAreWeHeadingContainer,
+.whereAreWeHeadingDiv,
+.whereAreWeHeadingHeader,
+.whereAreWeHeadingParagraph {
+    background-color: hsl(0, 20%, 0%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: hsl(0, 20%, 100%);
+}
+
+p {
+    padding: 20px;
+    margin: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.poker {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    min-height: 800px;
+}
+
+.information,
+.poker,
+.game,
+.cards,
+.gameConsole,
+.inCards,
+.result,
+.cards p,
+.poker button,
+.gameConsole button,
+.gameButtons,
+.window p,
+.window,
+.result button {
+    background-color: hsl(0, 20%, 100%);
+}
+
+.gameConsole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.poker {
+    text-align: center;
+    display: none;
+    overflow-x: hidden;
+}
+
+.cards p {
+    font-size: 1em;
+}
+
+.poker button{  
+    width: 10%;
+    height: 15%;
+    background: hsl(100, 80%, 60%);
+    color: hsl(20, 30%, 100%);
+    border: 0;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.gameButtons button{
+    width: 70%;
+    height: 25%;
+    background: hsl(100, 80%, 60%);
+    color: hsl(20, 30%, 100%);
+    border: 0;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+.inCards {
+    text-align: center;
+    font-size: 5rem;
+}
+
+@media (max-width: 2000px) {
+
+}
