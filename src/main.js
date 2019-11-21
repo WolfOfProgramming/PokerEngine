@@ -1,5 +1,3 @@
-"use strict";
-
 const cards = [
     { 'cardType': 'Heart', 'value': 9, 'cardSymbol': '🂹', 'cardColor': 'redCard'},
     { 'cardType': 'Tile', 'value': 9 , 'cardSymbol': '🃉', 'cardColor': 'redCard'},
