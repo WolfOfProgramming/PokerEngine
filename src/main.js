@@ -38,7 +38,7 @@ const cardsDiv = document.querySelector('.cards');
 const resultDiv = document.querySelector('.result');
 const inCards = document.querySelector('.inCards');
 const gameButtonsDiv = document.querySelector('.gameButtons');
-const window = document.querySelector('.window');
+const windowText = document.querySelector('.windowText');
 const computerPointsParagraph = document.querySelector('.computerPoints');
 const playerPointsParagraph = document.querySelector('.playerPoints')
 const poker = document.querySelector('.poker');
@@ -267,7 +267,7 @@ function compareResults(playerCards, computerCards) {
 } 
 
 function showResult(result) {
-    window.textContent = '';
+    windowText.textContent = '';
     const p = document.createElement('p');
     const button = document.createElement('button');
     const backToPage = document.createElement('button');
@@ -301,7 +301,7 @@ function showResult(result) {
         
     });
 
-    window.appendChild(p);
+    windowText.appendChild(p);
     resultDiv.appendChild(button);
     resultDiv.appendChild(backToPage);
 }
@@ -309,7 +309,7 @@ function showResult(result) {
 function resetBoard() {
     cardsDiv.textContent = '';
     resultDiv.textContent = '';
-    window.textContent = '';
+    windowText.textContent = '';
 }
 
 function showFinalCards(objectOfCards) {
@@ -355,9 +355,9 @@ function addGameButtons(playerCards, computerCards) {
     const p = document.createElement('p');
 
     raise.addEventListener('click', () => {
-        window.textContent = '';
+        windowText.textContent = '';
         p.textContent = 'Player Raises!';
-        window.appendChild(p);
+        windowText.appendChild(p);
         checkComputerMove( playerCards, computerCards );
     });
 
@@ -369,7 +369,7 @@ function addGameButtons(playerCards, computerCards) {
     check.addEventListener('click', () => {
 
         p.textContent = 'Player Checks...';
-        window.appendChild(p);
+        windowText.appendChild(p);
         const result = compareResults(playerCards, computerCards);
         setTimeout( () => { showResult(result); cleanButtons(); }, 700 );
     });
@@ -433,8 +433,8 @@ function cleanButtons() {
 }
 
 function createWindowParagraph( message ) {
-    window.textContent = '';
+    windowText.textContent = '';
     const p = document.createElement('p');
     p.textContent = message;
-    window.appendChild(p);
+    windowText.appendChild(p);
 }
