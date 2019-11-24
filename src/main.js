@@ -114,7 +114,6 @@ function getRandomCard(deckSource) {
 
 function setDeckForComputer(computerCards, deckSource) {
     const powerOfTheCurrentDeck = checkIndexOfResult(computerCards);
-    console.log(powerOfTheCurrentDeck);
     if( powerOfTheCurrentDeck >= 4) {
         return void 0;
     }
@@ -134,7 +133,6 @@ function setDeckForComputer(computerCards, deckSource) {
     for( let i = computerCards.length; i < 5; i++ ) {
         computerCards.push( getRandomCard(deckSource) );
     }
-    console.log(computerCards);
 }
 
 function compareNumbers(a, b) {
@@ -428,7 +426,7 @@ function checkComputerMove(playerCards, computerCards) {
     for( let i = 0; i < check; i++) {
         possibleMoves.push('check');
     }
-    console.log(possibleMoves);
+
     const computerMove = possibleMoves[ getRandomNumber(possibleMoves.length) ];
 
     switch(computerMove) {
