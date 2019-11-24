@@ -1,3 +1,5 @@
+"use strict";
+
 const cards = [
     { 'cardType': 'Heart', 'value': 9, 'cardSymbol': '🂹', 'cardColor': 'redCard'},
     { 'cardType': 'Tile', 'value': 9 , 'cardSymbol': '🃉', 'cardColor': 'redCard'},
@@ -77,20 +79,28 @@ function game() {
 
 startButton.addEventListener('click', (e) => {
     e.preventDefault();
-    startButton.classList.add('hidden');
+    startButton.style.display = 'none';
     const animation = mainContentDiv.animate([
         // keyframes
         { opacity: '1' }, 
         {  opacity: '0' }
       ], { 
         // timing options
-        duration: 1000,
+        duration: 700,
         fill: 'both'
       });
       animation.onfinish = function() {
           mainContentDiv.style.display = 'none';
           game();
           poker.style.display = 'block';
+          poker.animate([
+              { opacity: '0'},
+              { opacity: '1'}
+          ], 
+          {
+              duration: 700,
+              fill: 'both'
+          });
       }
 });
 
@@ -214,7 +224,23 @@ function showCards(objectOfCards) {
         p.textContent = cardsSymbols[i].cardSymbol;
         p.classList.add(cardsSymbols[i].cardColor);
         p.addEventListener('click', () => {
-            p.textContent = '🂠';
+            const animation = p.animate([
+                { opacity: '1'},
+                { opacity: '0'}
+            ], {
+                duration: 700,                
+                fill: 'both'
+            });
+            animation.onfinish = function() {
+                p.textContent = '🂠';
+                p.animate([
+                    { opacity: '0'},
+                    { opacity: '1'}
+                ], {
+                    duration: 700,                
+                    fill: 'both'
+                });
+            }
             objectOfCards[i] = void 0;
             displayWhatInCards(objectOfCards);
         });
@@ -281,6 +307,14 @@ function showResult(result) {
         button.remove();
         resetBoard();
         game();
+        poker.animate([
+            { opacity: '0'},
+            { opacity: '1'}
+        ], 
+        {
+            duration: 1000,
+            fill: 'both'
+        });
     });
 
     backToPage.addEventListener('click', (e) => {
@@ -297,8 +331,7 @@ function showResult(result) {
             duration: 1000,
             fill: 'both'
           });
-        startButton.style.display = 'block';
-        
+        startButton.style.display = 'block';   
     });
 
     windowText.appendChild(p);
@@ -367,7 +400,7 @@ function addGameButtons(playerCards, computerCards) {
         cleanButtons();
     });
     check.addEventListener('click', () => {
-
+        windowText.textContent = '';
         p.textContent = 'Player Checks...';
         windowText.appendChild(p);
         const result = compareResults(playerCards, computerCards);
